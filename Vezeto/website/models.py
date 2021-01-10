@@ -13,10 +13,12 @@ class Event(models.Model):
 
 class Participent(models.Model):
     name = models.CharField(max_length=30, blank=False)
-    year=models.IntegerField(max_length=10)
+    year=models.IntegerField()
     institute_name = models.CharField(max_length=50)
     email = models.EmailField(blank = False)
-    phone=models.IntegerField(max_length=15)
+    phone=models.IntegerField()
 
+    event = models.ForeignKey(Event , on_delete = models.CASCADE,default="")
+     
     def __str__(self):
         return self.name

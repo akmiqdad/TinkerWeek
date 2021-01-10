@@ -24,5 +24,5 @@ from .settings import STATIC_ROOT, STATIC_URL
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('', registration, name='registration'),
+    path('registration', registration, name='registration'),
 ]+  static(STATIC_URL, document_root=STATIC_ROOT)

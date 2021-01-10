@@ -4,9 +4,9 @@ from .models import Event, Participent
 # Register your models here.
 
 class ParticipentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'year', 'institute_name', 'phone')
+    list_display = ('name', 'year', 'institute_name', 'phone','event')
     search_fields = ('name','institute_name')
-    list_filter= ('year', 'institute_name')
+    list_filter= ('year', 'institute_name','event')
 
     class Meta:
         model = Participent
