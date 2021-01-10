@@ -1,4 +1,4 @@
-{% load static %}
+﻿{% load static %}
 {%load crispy_forms_tags %} 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,8 +34,8 @@
                                     {% for todo in todos %}
                                     <li>
                                         <div class="form-check">
-                                            {{ todo.title }}
-                                            {{ todo.description }}
+                                            <h6>{{ todo.title }}</h6>
+                                            <p>{{ todo.description }}</p>
                                         </div>
                                     </li>
                                     {% endfor %}
